@@ -19,5 +19,16 @@ class MainActivity : AppCompatActivity() {
         binding.reproductor.setVideoURI(contenido)
         binding.reproductor.requestFocus()
         binding.reproductor.start()
+
+        binding.stop.setOnClickListener {
+            binding.reproductor.requestFocus()
+            binding.reproductor.stopPlayback()
+        }
+
+        binding.play.setOnClickListener {
+            binding.reproductor.setVideoURI(contenido)
+            binding.reproductor.requestFocus()
+            binding.reproductor.start()
+        }
     }
 }
